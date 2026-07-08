@@ -246,3 +246,53 @@ Select Distinct(JoiningDate) From Employees;
 
 Select * From Employees;
 
+--Find Salary whose salary is between 45000 and 70000, but who are not in IT
+Select e.Empid, e.FirstName, e.MiddleName, e.LastName, e.Salary, d.DepName
+From Employees e
+Join Department d
+On e.Depid = d.Depid
+Where e.Salary Between 45000 and 70000
+And d.DepName <> 'IT';
+
+--Find employees whose names end with a and are active
+Select * From Employees
+Where FirstName Like '%a' And isActive = 1;
+
+--Find employees who joined in 2023
+Select * From Employees 
+Where JoiningDate Between  '2023-01-01' And '2023-12-31';
+
+--Adding Gmail Column and values 
+ALTER TABLE Employees
+ADD Gmail VARCHAR(50);
+
+UPDATE Employees SET Gmail = 'rabinabhattarai74@gmail.com' WHERE Empid = 101;
+UPDATE Employees SET Gmail = 'krisha@gmail.com' WHERE Empid = 102;
+UPDATE Employees SET Gmail = 'rahul@yahoo.com' WHERE Empid = 103;
+UPDATE Employees SET Gmail = 'ishika@gmail.com' WHERE Empid = 104;
+UPDATE Employees SET Gmail = 'ram@gmail.com' WHERE Empid = 105;
+UPDATE Employees SET Gmail = 'bishnu@hotmail.com' WHERE Empid = 106;
+UPDATE Employees SET Gmail = 'diwas@gmail.com' WHERE Empid = 107;
+UPDATE Employees SET Gmail = 'durga@gmail.com' WHERE Empid = 108;
+UPDATE Employees SET Gmail = 'maya@gmail.com' WHERE Empid = 109;
+UPDATE Employees SET Gmail = 'miksha@yahoo.com' WHERE Empid = 110;
+UPDATE Employees SET Gmail = 'suman@gmail.com' WHERE Empid = 111;
+UPDATE Employees SET Gmail = 'anisha@gmail.com' WHERE Empid = 112;
+UPDATE Employees SET Gmail = 'prakash@gmail.com' WHERE Empid = 113;
+UPDATE Employees SET Gmail = 'sabina@gmail.com' WHERE Empid = 114;
+UPDATE Employees SET Gmail = 'rohan@gmail.com' WHERE Empid= 115;
+
+Select * From Employees;
+
+--Find employees with a Gmail address and salary above 60000
+Select * From Employees  Where Gmail Like '%@gmail.com' And Salary > 60000;
+
+--Write a query that combines WHERE, AND, OR, LIKE, and ORDER BY in a single statement
+Select Empid, FirstName,LastName,Salary,isActive,JoiningDate
+From Employees
+Where (Salary > 50000 AND isActive = 1)
+   Or FirstName LIKE 'R%'
+Order By Salary Desc;
+
+Select * From Employees;
+

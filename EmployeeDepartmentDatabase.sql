@@ -1,3 +1,4 @@
+CREATE Database Cosys;
 CREATE TABLE Department(
 Depid INT PRIMARY KEY,
 DepName VARCHAR(50) Not Null);

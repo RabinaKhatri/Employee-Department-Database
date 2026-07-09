@@ -83,4 +83,13 @@ Where FirstName Like '%a' And isActive = 1;
 Select * From Employees 
 Where JoiningDate Between  '2023-01-01' And '2023-12-31';
 
+--Find employees with a Gmail address and salary above 60000
+Select * From Employees  Where Gmail Like '%@gmail.com' And Salary > 60000;
+
+--Write a query that combines WHERE, AND, OR, LIKE, and ORDER BY in a single statement
+Select Empid, FirstName,LastName,Salary,isActive,JoiningDate
+From Employees
+Where (Salary > 50000 AND isActive = 1)
+   Or FirstName LIKE 'R%'
+Order By Salary Desc;
 

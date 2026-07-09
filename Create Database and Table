@@ -1,20 +1,12 @@
+--Created Cosys Database
 CREATE Database Cosys;
+
+--Created Department Table
 CREATE TABLE Department(
 Depid INT PRIMARY KEY,
 DepName VARCHAR(50) Not Null);
 
-INSERT INTO Department(Depid, DepName)
-VALUES
-(01, 'IT'),
-(02, 'HR'),
-(03, 'Marketing'),
-(04, 'Finance'),
-(05, 'Sales'),
-(06,'Quality Assurance'),
-(07,'Data Migration');
-
-SELECT * FROM Department;
-
+--Created Employees Table
 CREATE TABLE Employees(
  Empid INT PRIMARY KEY,
  FirstName VARCHAR(50) Not Null,
@@ -25,3 +17,4 @@ CREATE TABLE Employees(
  isActive BIT,
  FOREIGN KEY (Depid) REFERENCES Department(Depid)
  );
+

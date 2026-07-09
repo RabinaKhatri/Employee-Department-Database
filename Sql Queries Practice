@@ -58,3 +58,29 @@ Order By Age;
 --Display all unique ages
 Select Distinct(Age) From Employees;
 
+--Display employees sorted by JoiningDate
+Select FirstName, MiddleName, LastName, JoiningDate From Employees
+Order By JoiningDate;
+
+--Display all unique JoiningDate values
+Select Distinct(JoiningDate) From Employees;
+
+Select * From Employees;
+
+--Find Salary whose salary is between 45000 and 70000, but who are not in IT
+Select e.Empid, e.FirstName, e.MiddleName, e.LastName, e.Salary, d.DepName
+From Employees e
+Join Department d
+On e.Depid = d.Depid
+Where e.Salary Between 45000 and 70000
+And d.DepName <> 'IT';
+
+--Find employees whose names end with a and are active
+Select * From Employees
+Where FirstName Like '%a' And isActive = 1;
+
+--Find employees who joined in 2023
+Select * From Employees 
+Where JoiningDate Between  '2023-01-01' And '2023-12-31';
+
+

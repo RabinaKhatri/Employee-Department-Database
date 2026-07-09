@@ -50,3 +50,11 @@ Order By FirstName, MiddleName, LastName;
 --Display employees IDs in descending order
 Select Empid From Employees
 Order By Empid Desc;
+
+--Write one query that shows all columns but sorts employees by age
+Select * From Employees
+Order By Age;
+
+--Display all unique ages
+Select Distinct(Age) From Employees;
+

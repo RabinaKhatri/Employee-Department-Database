@@ -1,0 +1,52 @@
+--To see the entire table of both Employees and Department
+Select * From Employees;
+Select * From Department;
+
+--Display only the FirstName Column.
+Select FirstName From Employees;
+
+--Display only the Salary Column.
+Select Salary From Employees;
+
+--Display FirstName, LastName, and Email
+Select FirstName, LastName From Employees;
+
+--Display Salary As MonthlySalary
+Select Salary As MonthlySalary From Employees;
+
+--Display DepName As DepartmentName
+Select DepName As DepartmentName From Department;
+
+--Display all unique departments from the Employees table
+Select Distinct(DepName) From Department;
+
+--Display employees sorted by salary in descending order
+Select * From Employees
+Order By Salary Desc;
+
+--Display employees sorted alphabetically by LastName in ascending order
+Select * From Employees
+Order By LastName;
+
+--Display employees sorted by isActive
+Select * From Employees
+Order By isActive;
+
+--Display employees sorted first by Department and then by Salary
+Select * From Employees
+Order By Depid, Salary;
+
+--Display the first 5 employees
+Select Top 5 * From Employees;
+
+--Display the top 7 highest-paid employees
+Select Top 7 * From Employees
+Order By Salary;
+
+--Display employee names in alphabetical order
+Select FirstName, MiddleName, LastName From Employees
+Order By FirstName, MiddleName, LastName;
+
+--Display employees IDs in descending order
+Select Empid From Employees
+Order By Empid Desc;

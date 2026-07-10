@@ -554,3 +554,14 @@ From Employees
 Union All
 Select Age As EmployeeAge
 From Employees;
+
+--Creating Backup Table of Both Employees and Department Table
+Select * into CosysEmployeesBackup From Employees;
+Select * From CosysEmployeesBackup;
+
+Select * into CosysDepartmentBackup From Department;
+Select * From CosysDepartmentBackup;
+
+--Creating Backup Employees Table in another Database  
+Select * into intern..abc From Employees;
+Select * into intern..CosysDepartment From Department;

@@ -13,7 +13,7 @@ Select FullName, Salary,
 From Employees;
 
 
---Display employee status.: Show whether an employee is Active or Inactive based on isActive
+--Display employee status: Show whether an employee is Active or Inactive based on isActive
 Select FullName, isActive,
   CASE
     WHEN isActive = 1 THEN 'Active'
